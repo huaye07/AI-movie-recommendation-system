@@ -108,8 +108,12 @@ theme_css = """
     }
 }
 
-body {
+html, body {
+    height: 100%;
+    margin: 0;
     animation: gradientAnimation 15s ease infinite;
+    background-size: cover;
+    background-attachment: fixed;
 }
 
 .title {
