@@ -94,26 +94,60 @@ def recommend_movies(user_id, search_query, merged_data):
 
 theme_css = """
 <style>
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700&display=swap');
+
+body {
+    background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+    color: #ffffff;
+    font-family: 'Outfit', sans-serif;
+}
 
 .title {
-    font-size: 50px;
+    font-size: 60px;
     text-align: center;
-    font-family: 'Bebas Neue', cursive;
-    color: #ff4c4c;
-    padding-top: 20px;
-    text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.7);
+    font-family: 'Outfit', sans-serif;
+    color: #ff6b81;
+    padding-top: 30px;
+    padding-bottom: 10px;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
 }
 
 .subtitle {
-    font-size: 22px;
+    font-size: 24px;
     text-align: center;
-    color: #f0f0f0;
-    margin-bottom: 30px;
-    font-family: 'Segoe UI', sans-serif;
-    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.6);
+    color: #e0e0e0;
+    margin-bottom: 40px;
+    font-weight: 300;
+}
+
+.stButton > button {
+    background-color: #ff6b81;
+    color: white;
+    font-weight: bold;
+    padding: 0.6rem 1.2rem;
+    border-radius: 10px;
+    border: none;
+    transition: all 0.3s ease-in-out;
+}
+
+.stButton > button:hover {
+    background-color: #ff4757;
+    transform: scale(1.05);
+}
+
+.stTextInput, .stNumberInput {
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 8px;
+}
+
+.movie-card {
+    background-color: rgba(255, 255, 255, 0.05);
+    padding: 20px;
+    border-radius: 20px;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.3);
 }
 </style>
-<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
 """
 
 st.markdown(theme_css, unsafe_allow_html=True)
