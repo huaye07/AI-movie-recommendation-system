@@ -99,7 +99,7 @@ theme_css = """
 html, body, .stApp {
     height: 100%;
     margin: 0;
-    background-color: #34495e;  /* Darker gradient background */
+    background-color: #f39c12;  /* A warm yellow-orange gradient background */
     font-family: 'Outfit', sans-serif;
 }
 
@@ -110,10 +110,10 @@ html, body, .stApp {
 .title {
     font-size: 60px;
     text-align: center;
-    color: #ff6b81;  /* Bright pinkish color for title */
+    color: #2c3e50;  /* Dark blue-gray for the title */
     padding-top: 40px;
     padding-bottom: 20px;
-    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5);
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.3);
 }
 
 .subtitle {
@@ -125,7 +125,7 @@ html, body, .stApp {
 }
 
 .stButton > button {
-    background-color: #ff6b81;  /* Bright pink button */
+    background-color: #e67e22;  /* A bright and inviting orange button */
     color: white;
     font-weight: bold;
     padding: 0.6rem 1.2rem;
@@ -135,7 +135,7 @@ html, body, .stApp {
 }
 
 .stButton > button:hover {
-    background-color: #ff4757;
+    background-color: #d35400;
     transform: scale(1.05);
 }
 
@@ -150,7 +150,7 @@ html, body, .stApp {
     padding: 20px;
     border-radius: 15px;
     margin-bottom: 20px;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
 }
 </style>
 """
