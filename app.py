@@ -197,33 +197,36 @@ def fetch_posters_for_recommendations(recommended_movies):
 
 # Button to generate recommendations
 if st.button('Get Recommendations'):
-    # Get recommended movies
-    recommended_movies = recommend_movies(user_id, search_query, merged_data)
+    with st.spinner('Finding the best movies for you... 🎬'):
+        # Get recommended movies
+        recommended_movies = recommend_movies(user_id, search_query, merged_data)
 
-    # Pre-fetch all poster URLs
-    recommended_movies = fetch_posters_for_recommendations(recommended_movies)
+        # Pre-fetch all poster URLs
+        recommended_movies = fetch_posters_for_recommendations(recommended_movies)
 
-    # Reset index for recommendations
-    recommended_movies = recommended_movies.reset_index(drop=True)
+        # Reset index for recommendations
+        recommended_movies = recommended_movies.reset_index(drop=True)
 
-    st.write("Top Recommended Movies for You:")
+        st.write("Top Recommended Movies for You:")
 
-    for _, row in recommended_movies.iterrows():
-      with st.container():
-        st.markdown('<div class="movie-card">', unsafe_allow_html=True)
-        col1, col2 = st.columns([1, 4])
+        for _, row in recommended_movies.iterrows():
+            with st.container():
+                st.markdown('<div class="movie-card">', unsafe_allow_html=True)
+                col1, col2 = st.columns([1, 4])
 
-        with col1:
-            if row['poster_url'] and row['poster_url'].lower() != "n/a":
-                st.image(row['poster_url'], width=200)
-            else:
-                st.text("No Image")
+                with col1:
+                    if row['poster_url'] and row['poster_url'].lower() != "n/a":
+                        st.image(row['poster_url'], width=200)
+                    else:
+                        st.text("No Image")
 
-        with col2:
-            st.markdown(f"### {row['original_title']}")
-            st.write(row['overview'])
+                with col2:
+                    st.markdown(f"### {row['original_title']}")
+                    st.write(row['overview'])
 
-        st.markdown('</div>', unsafe_allow_html=True)
+                st.markdown('</div>', unsafe_allow_html=True)
+
+    st.success("Recommendations loaded successfully! ✅")
 
     # Save the model components using pickle
     with open('movie_recommendation_model.pkl', 'wb') as model_file:
