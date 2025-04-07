@@ -179,21 +179,17 @@ if st.button('Get Recommendations'):
 
     # Display recommendations
     for _, row in recommended_movies.iterrows():
-        with st.container():
-            st.markdown('<div class="movie-card">', unsafe_allow_html=True)
-            col1, col2 = st.columns([1, 4])
-
-            with col1:
-                if row['poster_url'] and row['poster_url'].lower() != "n/a":
-                    st.image(row['poster_url'], width=130)
-                else:
-                    st.text("No Image")
-
-            with col2:
-                st.markdown(f"### {row['original_title']}")
-                st.write(row['overview'])
-
-            st.markdown('</div>', unsafe_allow_html=True)
+        col1, col2 = st.columns([1, 3])  # Two columns: poster and details
+        
+        with col1:
+            if row['poster_url'] and row['poster_url'].lower() != "n/a":
+                st.image(row['poster_url'], width=120)  # Display the poster
+            else:
+                st.text("No Image Available")
+        
+        with col2:
+            st.subheader(row['original_title'])
+            st.write(row['overview'])
 
     # Save the model components using pickle
     with open('movie_recommendation_model.pkl', 'wb') as model_file:
