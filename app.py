@@ -144,10 +144,20 @@ html, body, .stApp {
 }
 
 .stTextInput, .stNumberInput {
-    background-color: rgba(255, 255, 255, 0.2);  /* Lighter background for inputs */
-    color: white;
+    background-color: rgba(255, 255, 255, 0.5) !important;
+    color: white !important;
     border-radius: 8px;
-    border: 2px solid #9b59b6;  /* Purple border to match the theme */
+    border: 2px solid #9b59b6 !important;
+}
+
+.stTextInput > div, 
+.stNumberInput > div {
+    background: transparent !important;
+}
+
+.stTextInput input, 
+.stNumberInput input {
+    color: white !important;
 }
 
 .movie-card {
