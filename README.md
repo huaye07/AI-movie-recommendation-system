@@ -1,45 +1,107 @@
 # 🎬 AI Movie Recommendation System
 
-This is an AI-powered movie recommendation system that helps users find movies based on their past ratings and interests using natural language search. Built with Streamlit and powered by NLP techniques like TF-IDF and cosine similarity.
+An interactive AI-powered movie recommendation system that suggests personalized movie picks based on your search queries and past ratings using natural language processing.
 
-👉 **Try it live:**  
-[https://ai-movie-recommendation-system-h7ow2ahcckt2tjyyuehxai.streamlit.app](https://ai-movie-recommendation-system-h7ow2ahcckt2tjyyuehxai.streamlit.app)
+🌐 **Try it live here** →  
+👉 [https://ai-movie-recommendation-system-h7ow2ahcckt2tjyyuehxai.streamlit.app](https://ai-movie-recommendation-system-h7ow2ahcckt2tjyyuehxai.streamlit.app)
 
 ---
 
-## 🚀 Features
+## 📌 Features
 
-- 🔍 Search by title, keyword, or genre (e.g. "action", "romance", "space")
-- 📊 Personalized recommendations based on user ratings
-- 🧠 Uses TF-IDF and cosine similarity to compute content-based similarity
-- 🖼 Fetches movie posters using the OMDb API
-- 🎨 Beautiful custom Streamlit UI with Clemson-themed background
-- ✅ Easy to run locally or deploy on Streamlit Cloud
+- 🔍 Natural language movie search (by title, keyword, or genre)
+- 🍿 Personalized recommendations using your user ID and previous ratings
+- 📊 TF-IDF & cosine similarity-based recommendation engine
+- 🖼 Movie posters fetched dynamically from OMDb API
+- 🎨 Clean, custom-designed Streamlit interface
+
+---
+
+## ☁️ Deploy on Streamlit
+
+You can deploy this application on Streamlit directly. Here’s how to do it:
+
+### Step-by-Step Deployment:
+
+1. **Create a Streamlit Account:**
+   - Go to [Streamlit](https://streamlit.io/) and create an account if you don't already have one.
+
+2. **Install Streamlit:**
+   - Ensure that Python is installed on your machine. If it’s not installed, you can download it from [python.org](https://www.python.org/).
+   - Install Streamlit using pip:
+     ```bash
+     pip install streamlit
+     ```
+
+3. **Clone the Repository:**
+   - Clone the repository from GitHub using the following command:
+     ```bash
+     git clone https://github.com/huaye07/AI-movie-recommendation-system
+     ```
+   - Navigate into the project directory:
+     ```bash
+     cd AI-movie-recommendation-system
+     ```
+
+4. **Upload Your Files to Streamlit:**
+   - Go to [Streamlit Cloud](https://streamlit.io/cloud) and sign in with your Streamlit account.
+   - Click on the “New app” button and connect your GitHub repository.
+   - Select the repository and the file (`app.py`) to deploy.
+
+5. **Deploy Your Application:**
+   - Streamlit will automatically install the required dependencies and deploy the app.
+
+6. **Access Your Application:**
+   - Once deployed, Streamlit will give you a URL for your deployed application.
+   - You can share this URL for others to access the live recommendation system.
+
+---
+
+### Live Demo:
+
+👉 [Click here to try the Movie Recommendation System](https://ai-movie-recommendation-system-h7ow2ahcckt2tjyyuehxai.streamlit.app)
+
+---
+
+## 📂 Data Requirements
+
+The application uses the following datasets:
+
+- `movies_metadata.csv`
+- `ratings.csv`
+
+These files are used to build the recommendation engine. They can be downloaded from [Kaggle - The Movies Dataset](https://www.kaggle.com/datasets/rounakbanik/the-movies-dataset).
 
 ---
 
 ## 🧠 How It Works
 
-1. **Data Loading**: Loads movie metadata and user ratings from CSV files
-2. **Filtering & Merging**: Combines the datasets and processes them
-3. **Recommendation**: Uses TF-IDF on movie overviews and cosine similarity to find movies similar to the user's rated content
-4. **Poster Fetching**: Queries OMDb API to retrieve movie posters using IMDb IDs
-5. **UI**: Interactive frontend built with Streamlit
+1. **Data Loading**: The system loads movie metadata and user ratings from the CSV files.
+2. **Preprocessing**: It cleans the data (handling missing values and converting types).
+3. **Recommendation Engine**: The system uses a TF-IDF vectorizer on movie overviews and computes cosine similarity between user ratings and movie descriptions to suggest personalized movie recommendations.
+4. **Movie Posters**: Movie posters are dynamically fetched using the IMDb ID via the OMDb API.
+5. **Display**: The recommended movies are displayed along with their posters, titles, and descriptions.
 
 ---
 
-## 📁 Files
+## 💻 Technologies Used
 
-- `app.py` – Main Streamlit application
-- `movies_metadata.csv` – Movie information dataset (from Kaggle)
-- `ratings.csv` – User ratings dataset (from Kaggle)
-- `README.md` – You’re reading it!
+- **Python**
+- **Streamlit** for the web interface
+- **pandas** for data manipulation
+- **scikit-learn** for machine learning (TF-IDF and cosine similarity)
+- **requests** for fetching movie posters from OMDb API
 
 ---
 
-## 🛠 How to Run Locally
+## 📄 License
 
-### 1. Clone the repository
-```bash
-git clone https://github.com/yourusername/ai-movie-recommendation-system.git
-cd ai-movie-recommendation-system
+MIT License © 2025 Huaye Li
+
+---
+
+## 🙌 Acknowledgements
+
+- [The Movies Dataset – Kaggle](https://www.kaggle.com/datasets/rounakbanik/the-movies-dataset)
+- [OMDb API](https://www.omdbapi.com/)
+- [Streamlit](https://streamlit.io/)
