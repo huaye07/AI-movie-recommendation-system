@@ -96,25 +96,11 @@ theme_css = """
 <style>
 @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700&display=swap');
 
-@keyframes gradientAnimation {
-    0% {
-        background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
-    }
-    50% {
-        background: linear-gradient(135deg, #2c5364, #203a43, #0f2027);
-    }
-    100% {
-        background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
-    }
-}
-
 html, body, .stApp {
     height: 100%;
     margin: 0;
-    animation: gradientAnimation 15s ease infinite;
-    background-size: cover;
-    background-attachment: fixed;
-    background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+    background-color: #34495e;  /* Darker gradient background */
+    font-family: 'Outfit', sans-serif;
 }
 
 .stApp, .stApp > div, .stApp > div > div {
@@ -124,27 +110,26 @@ html, body, .stApp {
 .title {
     font-size: 60px;
     text-align: center;
-    font-family: 'Outfit', sans-serif;
-    color: #ff6b81;
-    padding-top: 30px;
-    padding-bottom: 10px;
-    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
+    color: #ff6b81;  /* Bright pinkish color for title */
+    padding-top: 40px;
+    padding-bottom: 20px;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5);
 }
 
 .subtitle {
     font-size: 24px;
     text-align: center;
-    color: #e0e0e0;
+    color: #ecf0f1;  /* Light grayish text for subtitle */
     margin-bottom: 40px;
     font-weight: 300;
 }
 
 .stButton > button {
-    background-color: #ff6b81;
+    background-color: #ff6b81;  /* Bright pink button */
     color: white;
     font-weight: bold;
     padding: 0.6rem 1.2rem;
-    border-radius: 10px;
+    border-radius: 12px;
     border: none;
     transition: all 0.3s ease-in-out;
 }
@@ -156,21 +141,22 @@ html, body, .stApp {
 
 .stTextInput, .stNumberInput {
     background-color: rgba(255, 255, 255, 0.1);
+    color: white;
     border-radius: 8px;
 }
 
 .movie-card {
-    background-color: rgba(255, 255, 255, 0.05);
+    background-color: rgba(255, 255, 255, 0.1);
     padding: 20px;
-    border-radius: 20px;
+    border-radius: 15px;
     margin-bottom: 20px;
-    box-shadow: 0 4px 20px rgba(0,0,0,0.3);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
 }
 </style>
 """
 
 st.markdown(theme_css, unsafe_allow_html=True)
- 
+
 st.markdown('<div class="title">Movie Recommendations For You 🍿</div>', unsafe_allow_html=True)
 st.markdown('<div class="subtitle">Tell us what you feel like watching and we\'ll do the rest 🎬</div>', unsafe_allow_html=True)
  
