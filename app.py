@@ -108,12 +108,13 @@ theme_css = """
     }
 }
 
-html, body {
+html, body, .stApp {
     height: 100%;
     margin: 0;
     animation: gradientAnimation 15s ease infinite;
     background-size: cover;
     background-attachment: fixed;
+    background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
 }
 
 .title {
