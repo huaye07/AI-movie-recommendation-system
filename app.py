@@ -178,23 +178,22 @@ if st.button('Get Recommendations'):
     st.write("Top Recommended Movies for You:")
 
     # Display recommendations
-for _, row in recommended_movies.iterrows():
-    with st.container():
-        st.markdown('<div class="movie-card">', unsafe_allow_html=True)
-        col1, col2 = st.columns([1, 4])
+    for _, row in recommended_movies.iterrows():
+        with st.container():
+            st.markdown('<div class="movie-card">', unsafe_allow_html=True)
+            col1, col2 = st.columns([1, 4])
 
-        with col1:
-            if row['poster_url'] and row['poster_url'].lower() != "n/a":
-                st.image(row['poster_url'], width=130)
-            else:
-                st.text("No Image")
+            with col1:
+                if row['poster_url'] and row['poster_url'].lower() != "n/a":
+                    st.image(row['poster_url'], width=130)
+                else:
+                    st.text("No Image")
 
-        with col2:
-            st.markdown(f"### {row['original_title']}")
-            st.write(row['overview'])
+            with col2:
+                st.markdown(f"### {row['original_title']}")
+                st.write(row['overview'])
 
-        st.markdown('</div>', unsafe_allow_html=True)
-
+            st.markdown('</div>', unsafe_allow_html=True)
 
     # Save the model components using pickle
     with open('movie_recommendation_model.pkl', 'wb') as model_file:
