@@ -96,10 +96,20 @@ theme_css = """
 <style>
 @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700&display=swap');
 
+@keyframes gradientAnimation {
+    0% {
+        background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+    }
+    50% {
+        background: linear-gradient(135deg, #2c5364, #203a43, #0f2027);
+    }
+    100% {
+        background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+    }
+}
+
 body {
-    background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
-    color: #ffffff;
-    font-family: 'Outfit', sans-serif;
+    animation: gradientAnimation 15s ease infinite;
 }
 
 .title {
