@@ -92,31 +92,36 @@ def recommend_movies(user_id, search_query, merged_data):
     top_recommendations = filtered_movies.sort_values(by='similarity_score', ascending=False)
     return top_recommendations[['original_title', 'overview', 'similarity_score', 'imdb_id']].drop_duplicates(subset='original_title').head(10)
 
-# Streamlit UI
- theme_css = """
- <style>
- body {
-     background-image: url('https://images.app.goo.gl/9GZoYGrN6VnjHt9t8');
-     background-size: cover;
-     background-attachment: fixed;
- }
- .title {
-     font-size: 50px;
-     text-align: center;
-     font-family: 'Bebas Neue', cursive;
-     color: #ff4c4c;
-     padding-top: 20px;
- }
- .subtitle {
-     font-size: 22px;
-     text-align: center;
-     color: #f0f0f0;
-     margin-bottom: 30px;
-     font-family: 'Segoe UI', sans-serif;
- }
- </style>
- <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
- """
+theme_css = """
+<style>
+body {
+    background-image: url('https://images.app.goo.gl/9GZoYGrN6VnjHt9t8?auto=format&fit=crop&w=1950&q=80');
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+}
+
+.title {
+    font-size: 50px;
+    text-align: center;
+    font-family: 'Bebas Neue', cursive;
+    color: #ff4c4c;
+    padding-top: 20px;
+    text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.7);
+}
+
+.subtitle {
+    font-size: 22px;
+    text-align: center;
+    color: #f0f0f0;
+    margin-bottom: 30px;
+    font-family: 'Segoe UI', sans-serif;
+    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.6);
+}
+</style>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+"""
+
  
  st.markdown(theme_css, unsafe_allow_html=True)
  
