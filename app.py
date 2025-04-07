@@ -100,7 +100,7 @@ html, body, .stApp {
     height: 100%;
     margin: 0;
     background-color: #f39c12;  /* A warm yellow-orange gradient background */
-    background-image: url('https://images.unsplash.com/photo-1518717758534-df3b5f67c2f7');
+    background-image: url('https://1000logos.net/wp-content/uploads/2022/11/Clemson-Tigers-Logo.png');
     background-size: cover;
     background-position: center center;
     background-attachment: fixed;
