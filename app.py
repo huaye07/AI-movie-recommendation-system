@@ -96,24 +96,11 @@ theme_css = """
 <style>
 @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700&display=swap');
 
-@keyframes gradientAnimation {
-    0% {
-        background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
-    }
-    50% {
-        background: linear-gradient(135deg, #2c5364, #203a43, #0f2027);
-    }
-    100% {
-        background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
-    }
-}
-
 html, body {
     height: 100%;
     margin: 0;
-    animation: gradientAnimation 15s ease infinite;
-    background-size: cover;
-    background-attachment: fixed;
+    background-color: #3498db;  /* Simple blue background */
+    color: white;
 }
 
 .title {
