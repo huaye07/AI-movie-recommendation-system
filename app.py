@@ -101,6 +101,9 @@ html, body, .stApp {
     margin: 0;
     background-color: #f39c12;  /* A warm yellow-orange gradient background */
     background-image: url('https://1000logos.net/wp-content/uploads/2022/11/Clemson-Tigers-Logo.png');
+    background-size: cover;  /* Ensures the image covers the entire page */
+    background-position: center center;  /* Center the image */
+    background-attachment: fixed;  /* Keeps the background fixed when scrolling */
     font-family: 'Outfit', sans-serif;
 }
 
