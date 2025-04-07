@@ -117,6 +117,10 @@ html, body, .stApp {
     background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
 }
 
+.stApp, .stApp > div, .stApp > div > div {
+    background: transparent !important;
+}
+
 .title {
     font-size: 60px;
     text-align: center;
