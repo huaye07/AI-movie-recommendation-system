@@ -143,23 +143,34 @@ html, body, .stApp {
     transform: scale(1.05);
 }
 
-.stTextInput, .stNumberInput {
-    background-color: rgba(255, 255, 255, 0.5) !important;
-    color: white !important;
-    border-radius: 8px;
-    border: 2px solid #9b59b6 !important;
+/* Input box container styling */
+.stTextInput > div > div,
+.stNumberInput > div > div {
+    background-color: transparent !important; /* Make container fully transparent */
 }
 
-.stTextInput > div, 
-.stNumberInput > div {
-    background: transparent !important;
-}
-
-.stTextInput input, 
+/* Input field styling */
+.stTextInput input,
 .stNumberInput input {
-    color: white !important;
+    background-color: rgba(107, 27, 154, 0.7) !important; /* Purple background with 70% opacity */
+    color: white !important; /* White text color */
+    border-radius: 8px !important; /* Rounded corners */
+    border: 2px solid #9b59b6 !important; /* Purple border */
+    padding: 8px 12px !important; /* Internal spacing */
 }
 
+/* Focus state styling */
+.stTextInput input:focus,
+.stNumberInput input:focus {
+    border-color: #8e44ad !important; /* Darker purple border on focus */
+    box-shadow: 0 0 0 2px rgba(142, 68, 173, 0.5) !important; /* Glow effect */
+}
+
+/* Placeholder text styling */
+.stTextInput input::placeholder,
+.stNumberInput input::placeholder {
+    color: rgba(255, 255, 255, 0.6) !important; /* Semi-transparent white placeholder text */
+}
 .movie-card {
     background-color: rgba(0, 0, 0, 0.5);  /* Semi-transparent dark background for cards */
     padding: 20px;
