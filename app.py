@@ -122,14 +122,13 @@ body {
 <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
 """
 
+st.markdown(theme_css, unsafe_allow_html=True)
  
- st.markdown(theme_css, unsafe_allow_html=True)
+st.markdown('<div class="title">Recommendations For You 🍿</div>', unsafe_allow_html=True)
+st.markdown('<div class="subtitle">Tell us what you feel like watching and we\'ll do the rest 🎬</div>', unsafe_allow_html=True)
  
- st.markdown('<div class="title">Recommendations For You 🍿</div>', unsafe_allow_html=True)
- st.markdown('<div class="subtitle">Tell us what you feel like watching and we\'ll do the rest 🎬</div>', unsafe_allow_html=True)
- 
- user_id = st.number_input("Your User ID", min_value=1, max_value=1000, help="Choose a user ID between 1 and 1000")
- search_query = st.text_input("Movie title, keyword, or genre", help="Search something like 'action', 'romance', 'space', etc.")
+user_id = st.number_input("Your User ID", min_value=1, max_value=1000, help="Choose a user ID between 1 and 1000")
+search_query = st.text_input("Movie title, keyword, or genre", help="Search something like 'action', 'romance', 'space', etc.")
 
 # Pre-fetch poster URLs for recommendations
 def fetch_posters_for_recommendations(recommended_movies):
