@@ -92,39 +92,27 @@ def recommend_movies(user_id, search_query, merged_data):
     top_recommendations = filtered_movies.sort_values(by='similarity_score', ascending=False)
     return top_recommendations[['original_title', 'overview', 'similarity_score', 'imdb_id']].drop_duplicates(subset='original_title').head(10)
 
-# Streamlit UI
-theme_css = """
-<style>
-body {
-    background-image: url('https://images.unsplash.com/photo-1606312618775-003bfe2f4c92');
-    background-size: cover;
-    background-attachment: fixed;
-}
-.title {
-    font-size: 50px;
-    text-align: center;
-    font-family: 'Bebas Neue', cursive;
-    color: #ff4c4c;
-    padding-top: 20px;
-}
-.subtitle {
-    font-size: 22px;
-    text-align: center;
-    color: #f0f0f0;
-    margin-bottom: 30px;
-    font-family: 'Segoe UI', sans-serif;
-}
-</style>
-<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
-"""
+# Streamlit user interface
+st.markdown(
+    """
+    <style>
+    .title {
+        color: red;
+        font-family: 'Bebas Neue', sans-serif;
+        font-size: 48px;
+        text-align: center;
+    }
+    </style>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+    """,
+    unsafe_allow_html=True,
+)
 
-st.markdown(theme_css, unsafe_allow_html=True)
+st.markdown('<h1 class="title">Recommendations For You!</h1>', unsafe_allow_html=True)
 
-st.markdown('<div class="title">Movie Recommendations For You 🍿</div>', unsafe_allow_html=True)
-st.markdown('<div class="subtitle">Tell us what you feel like watching and we\'ll do the rest 🎬</div>', unsafe_allow_html=True)
-
-user_id = st.number_input("Your User ID", min_value=1, max_value=1000, help="Choose a user ID between 1 and 1000")
-search_query = st.text_input("Movie title, keyword, or genre", help="Search something like 'action', 'romance', 'space', etc.")
+# Input fields for user ID and search query
+user_id = st.number_input("Enter User ID", min_value=1, max_value=1000)
+search_query = st.text_input("What would you like to watch today?")
 
 # Pre-fetch poster URLs for recommendations
 def fetch_posters_for_recommendations(recommended_movies):
