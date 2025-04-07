@@ -178,7 +178,7 @@ if st.button('Get Recommendations'):
     st.write("Top Recommended Movies for You:")
 
     for _, row in recommended_movies.iterrows():
-    with st.container():
+      with st.container():
         st.markdown('<div class="movie-card">', unsafe_allow_html=True)
         col1, col2 = st.columns([1, 4])
 
