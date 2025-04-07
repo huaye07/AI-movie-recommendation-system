@@ -99,7 +99,7 @@ theme_css = """
 html, body, .stApp {
     height: 100%;
     margin: 0;
-    background-color: #f39c12;  /* A warm yellow-orange gradient background */
+    background-color: #6a1b9a;  /* Deep purple background */
     background-image: url('https://1000logos.net/wp-content/uploads/2022/11/Clemson-Tigers-Logo.png');
     background-size: cover;
     background-position: center center;
@@ -114,7 +114,7 @@ html, body, .stApp {
 .title {
     font-size: 60px;
     text-align: center;
-    color: #ffffff;  /* White color for better contrast against the orange background */
+    color: #ffffff;  /* White color for better contrast against the purple background */
     padding-top: 40px;
     padding-bottom: 20px;
     text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.6);  /* Dark shadow for better readability */
@@ -129,7 +129,7 @@ html, body, .stApp {
 }
 
 .stButton > button {
-    background-color: #e67e22;  /* Bright orange button */
+    background-color: #9b59b6;  /* Lighter purple button to match the theme */
     color: white;
     font-weight: bold;
     padding: 0.6rem 1.2rem;
@@ -139,15 +139,15 @@ html, body, .stApp {
 }
 
 .stButton > button:hover {
-    background-color: #d35400;
+    background-color: #8e44ad;  /* Darker purple when hovered */
     transform: scale(1.05);
 }
 
 .stTextInput, .stNumberInput {
-    background-color: rgba(0, 0, 0, 0.2);  /* Darker background for inputs */
+    background-color: rgba(255, 255, 255, 0.2);  /* Lighter background for inputs */
     color: white;
     border-radius: 8px;
-    border: 2px solid #e67e22;  /* Orange border to match the theme */
+    border: 2px solid #9b59b6;  /* Purple border to match the theme */
 }
 
 .movie-card {
