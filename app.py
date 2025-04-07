@@ -215,7 +215,7 @@ if st.button('Get Recommendations'):
 
         with col1:
             if row['poster_url'] and row['poster_url'].lower() != "n/a":
-                st.image(row['poster_url'], width=130)
+                st.image(row['poster_url'], width=200)
             else:
                 st.text("No Image")
 
