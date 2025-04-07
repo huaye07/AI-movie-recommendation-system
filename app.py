@@ -100,10 +100,10 @@ html, body, .stApp {
     height: 100%;
     margin: 0;
     background-color: #f39c12;  /* A warm yellow-orange gradient background */
-    background-image: url('https://1000logos.net/wp-content/uploads/2022/11/Clemson-Tigers-Logo.png');
-    background-size: cover;  /* Ensures the image covers the entire page */
-    background-position: center center;  /* Center the image */
-    background-attachment: fixed;  /* Keeps the background fixed when scrolling */
+    background-image: url('https://images.unsplash.com/photo-1518717758534-df3b5f67c2f7');
+    background-size: cover;
+    background-position: center center;
+    background-attachment: fixed;
     font-family: 'Outfit', sans-serif;
 }
 
@@ -114,22 +114,22 @@ html, body, .stApp {
 .title {
     font-size: 60px;
     text-align: center;
-    color: #2c3e50;  /* Dark blue-gray for the title */
+    color: #ffffff;  /* White color for better contrast against the orange background */
     padding-top: 40px;
     padding-bottom: 20px;
-    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.3);
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.6);  /* Dark shadow for better readability */
 }
 
 .subtitle {
     font-size: 24px;
     text-align: center;
-    color: #ecf0f1;  /* Light grayish text for subtitle */
+    color: #ecf0f1;  /* Light grayish color for subtitle */
     margin-bottom: 40px;
     font-weight: 300;
 }
 
 .stButton > button {
-    background-color: #e67e22;  /* A bright and inviting orange button */
+    background-color: #e67e22;  /* Bright orange button */
     color: white;
     font-weight: bold;
     padding: 0.6rem 1.2rem;
@@ -144,13 +144,14 @@ html, body, .stApp {
 }
 
 .stTextInput, .stNumberInput {
-    background-color: rgba(255, 255, 255, 0.1);
+    background-color: rgba(0, 0, 0, 0.2);  /* Darker background for inputs */
     color: white;
     border-radius: 8px;
+    border: 2px solid #e67e22;  /* Orange border to match the theme */
 }
 
 .movie-card {
-    background-color: rgba(255, 255, 255, 0.1);
+    background-color: rgba(0, 0, 0, 0.5);  /* Semi-transparent dark background for cards */
     padding: 20px;
     border-radius: 15px;
     margin-bottom: 20px;
