@@ -94,12 +94,6 @@ def recommend_movies(user_id, search_query, merged_data):
 
 theme_css = """
 <style>
-body {
-    background-image: url('https://images.app.goo.gl/9GZoYGrN6VnjHt9t8?auto=format&fit=crop&w=1950&q=80');
-    background-size: cover;
-    background-attachment: fixed;
-    background-position: center;
-}
 
 .title {
     font-size: 50px;
@@ -124,7 +118,7 @@ body {
 
 st.markdown(theme_css, unsafe_allow_html=True)
  
-st.markdown('<div class="title">Recommendations For You 🍿</div>', unsafe_allow_html=True)
+st.markdown('<div class="title">Movie Recommendations For You 🍿</div>', unsafe_allow_html=True)
 st.markdown('<div class="subtitle">Tell us what you feel like watching and we\'ll do the rest 🎬</div>', unsafe_allow_html=True)
  
 user_id = st.number_input("Your User ID", min_value=1, max_value=1000, help="Choose a user ID between 1 and 1000")
